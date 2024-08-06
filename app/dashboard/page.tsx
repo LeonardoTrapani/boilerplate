@@ -20,7 +20,7 @@ export default async function DashboardPage() {
     },
   })
 
-  if (!user || !user.resume) {
+  if (!user) {
     signOut()
     return notFound()
   }

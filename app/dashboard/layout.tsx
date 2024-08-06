@@ -1,4 +1,4 @@
-import { notFound, redirect } from "next/navigation"
+import { notFound } from "next/navigation"
 import { signOut } from "next-auth/react"
 
 import { getCurrentUser } from "@/lib/session"
@@ -10,10 +10,6 @@ export default async function DashboardLayout({ children }) {
   if (!user) {
     signOut()
     return notFound()
-  }
-
-  if (!user.hasResume) {
-    redirect("/onboarding")
   }
 
   return (

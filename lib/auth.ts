@@ -72,7 +72,6 @@ export const authOptions: NextAuthOptions = {
         session.user.name = token.name
         session.user.email = token.email
         session.user.image = token.picture
-        session.user.hasResume = token.hasResume
       }
 
       return session
@@ -87,7 +86,6 @@ export const authOptions: NextAuthOptions = {
           name: true,
           email: true,
           image: true,
-          resume: true,
         },
       })
 
@@ -103,7 +101,6 @@ export const authOptions: NextAuthOptions = {
         name: dbUser.name,
         email: dbUser.email,
         picture: dbUser.image,
-        hasResume: !!dbUser.resume?.length,
       }
     },
   },
