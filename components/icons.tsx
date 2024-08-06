@@ -1,13 +1,16 @@
 import {
   AlertTriangle,
   Box,
+  Check,
   ChevronLeft,
   ChevronsDown,
   ChevronsDownUp,
   ChevronsUp,
   ChevronsUpDown,
   Cpu,
+  CreditCard,
   Eye,
+  FileText,
   Info,
   Laptop,
   Lightbulb,
@@ -16,6 +19,7 @@ import {
   Moon,
   MoreVertical,
   Plus,
+  Settings,
   Sun,
   Trash,
   UploadCloud,
@@ -39,6 +43,7 @@ export const Icons = {
   trash: Trash,
   user: User,
   empty: Box,
+  check: Check,
   add: Plus,
   warning: AlertTriangle,
   close: X,
@@ -47,9 +52,12 @@ export const Icons = {
   open: ChevronsUpDown,
   info: Info,
   weakness: ChevronsDown,
+  billing: CreditCard,
+  post: FileText,
   strength: ChevronsUp,
   hint: Lightbulb,
   eye: Eye,
+  settings: Settings,
   ai: ({ ...props }: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -89,5 +97,5 @@ export const Icons = {
     </svg>
   ),
   //TODO: Replace with actual logo
-  logo: ({ ...props }: LucideProps) => <Logo width={50} {...props} />,
+  logo: ({ ...props }: LucideProps) => <Logo width={22} {...props} />,
 }

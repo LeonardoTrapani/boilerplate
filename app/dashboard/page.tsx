@@ -1,40 +1,48 @@
-import { notFound } from "next/navigation"
-import { signOut } from "next-auth/react"
+import { redirect } from "next/navigation"
 
-import { db } from "@/lib/db"
+import { authOptions } from "@/lib/auth"
 import { getCurrentUser } from "@/lib/session"
+import { DashboardShell } from "@/components/dashboard-shell"
+import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { Header } from "@/components/header"
-import { UserDropdown } from "@/components/user-dropdown"
+import { PostCreateButton } from "@/components/post-create-button"
+
+export const metadata = {
+  title: "Dashboard",
+}
 
 export default async function DashboardPage() {
-  const sessionUser = await getCurrentUser()
-
-  if (!sessionUser) {
-    signOut()
-    return notFound()
-  }
-
-  const user = await db.user.findUnique({
-    where: {
-      id: sessionUser.id,
-    },
-  })
+  const user = await getCurrentUser()
 
   if (!user) {
-    signOut()
-    return notFound()
+    redirect(authOptions?.pages?.signIn || "/login")
   }
 
+  const posts = []
+
   return (
-    <div className="min-h-[80vh]">
-      <Header heading="Dashboard" text="TODO-INIT: Add a description here.">
-        <div className="flex flex-row-reverse justify-start gap-2 sm:flex-row sm:justify-end">
-          <UserDropdown user={user} />
-        </div>
+    <DashboardShell>
+      <Header heading="Posts" text="Create and manage posts.">
+        <PostCreateButton />
       </Header>
-      {
-        //TODO-INIT: Add your content here.
-      }
-    </div>
+      <div>
+        {posts?.length ? (
+          <div className="divide-y divide-border rounded-md border">
+            {posts.map((_post) => (
+              <div>implement your component</div>
+            ))}
+          </div>
+        ) : (
+          <EmptyPlaceholder>
+            <EmptyPlaceholder.Icon name="ai" />
+            <EmptyPlaceholder.Title>No posts created</EmptyPlaceholder.Title>
+            <EmptyPlaceholder.Description>
+              You don&apos;t have any posts yet. Start creating content.
+            </EmptyPlaceholder.Description>
+            <PostCreateButton variant="outline" />
+          </EmptyPlaceholder>
+        )}
+      </div>
+    </DashboardShell>
   )
 }

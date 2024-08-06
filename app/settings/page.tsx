@@ -43,7 +43,7 @@ export default async function SettingsPage() {
         href="/dashboard"
         className={cn(buttonVariants({ variant: "ghost" }), "mt-4")}
       >
-        <Icons.chevronLeft className="mr-2 h-4 w-4" />
+        <Icons.chevronLeft className="mr-2 size-4" />
         Back
       </Link>
       <Header heading="Settings" text="Manage account and website settings.">

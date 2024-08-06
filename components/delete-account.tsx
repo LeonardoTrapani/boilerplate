@@ -8,6 +8,7 @@ import { signOut } from "next-auth/react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -15,12 +16,16 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-
-import { Icons } from "../icons"
-import { Button } from "../ui/button"
-import { Form, FormField, FormItem, FormLabel, FormMessage } from "../ui/form"
-import { Input } from "../ui/input"
-import { toast } from "../ui/use-toast"
+import {
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { toast } from "@/components/ui/use-toast"
+import { Icons } from "@/components/icons"
 
 interface DeleteAccountProps {
   userId: User["id"]
@@ -97,7 +102,7 @@ export function DeleteAccount({ userId }: DeleteAccountProps) {
             />
             <Button type="submit" className="mt-2" variant="destructive">
               {loading && (
-                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                <Icons.spinner className="mr-2 size-4 animate-spin" />
               )}
               Delete account
             </Button>

@@ -6,7 +6,8 @@ export default withAuth(
   async function middleware(req) {
     const token = await getToken({ req })
 
-    const isMarketingPage = req.nextUrl.pathname === "/"
+    const isMarketingPage =
+      req.nextUrl.pathname === "/" || req.nextUrl.pathname === "/pricing"
     if (isMarketingPage) {
       return null
     }

@@ -1,19 +1,16 @@
-import { Skeleton } from "@/components/ui/skeleton"
+import { DashboardShell } from "@/components/dashboard-shell"
 import { Header } from "@/components/header"
+import { PostCreateButton } from "@/components/post-create-button"
 
 export default function DashboardLoading() {
   return (
-    <div>
-      <Header heading="Dashboard" text="TODO-INIT">
-        <div className="flex flex-row-reverse justify-start gap-2 sm:flex-row sm:justify-end">
-          <Skeleton className="h-4 w-4 rounded-full" />
-        </div>
+    <DashboardShell>
+      <Header heading="Posts" text="Create and manage posts.">
+        <PostCreateButton />
       </Header>
       <div className="divide-border-200 divide-y rounded-md border">
-        {
-          //TODO-INIT: Add your skeletons here.
-        }
+        {/* TODO-INIT: implement skeleton loading */}
       </div>
-    </div>
+    </DashboardShell>
   )
 }
