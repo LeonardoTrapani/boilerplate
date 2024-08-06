@@ -96,6 +96,6 @@ export const Icons = {
       ></path>
     </svg>
   ),
-  //TODO: Replace with actual logo
+  //TODO-INIT: Replace with actual logo
   logo: ({ ...props }: LucideProps) => <Logo width={22} {...props} />,
 }

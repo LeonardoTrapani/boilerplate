@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import { redirect } from "next/navigation"
 
 import { authOptions } from "@/lib/auth"
@@ -10,7 +11,7 @@ import { DashboardShell } from "@/components/dashboard-shell"
 import { Header } from "@/components/header"
 import { Icons } from "@/components/icons"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Billing",
   description: "Manage billing and your subscription plan.",
 }

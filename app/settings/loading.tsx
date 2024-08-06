@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Link from "next/link"
 import { redirect } from "next/navigation"
 
@@ -10,7 +11,7 @@ import { Header } from "@/components/header"
 import { Icons } from "@/components/icons"
 import { UserNameForm } from "@/components/user-name-form"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Settings",
   description: "Manage account and website settings.",
 }

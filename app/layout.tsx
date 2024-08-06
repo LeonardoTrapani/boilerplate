@@ -2,6 +2,7 @@ import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
 import "@/styles/globals.css"
+import { Metadata } from "next"
 import { Provider as BalancerProvider } from "react-wrap-balancer"
 
 import { siteConfig } from "@/config/site"
@@ -26,7 +27,7 @@ interface RootLayoutProps {
   children: React.ReactNode
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -35,10 +36,6 @@ export const metadata = {
   keywords: siteConfig.keywords,
   authors: [siteConfig.author],
   creator: "Leonardo Trapani",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",

@@ -25,7 +25,7 @@ export function UserDropdown({ user }: UserDropdownProps) {
       <DropdownMenuTrigger className="rounded-full">
         <UserAvatar
           user={{ name: user.name || null, image: user.image || null }}
-          className="h-8 w-8 rounded-full"
+          className="size-8 rounded-full"
         />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

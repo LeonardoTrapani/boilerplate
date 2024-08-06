@@ -1,10 +1,11 @@
+import { Metadata } from "next"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Pricing",
 }
 

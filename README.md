@@ -32,4 +32,4 @@ cp .env.example .env.local
 pnpm run dev
 ```
 
-4. Search all the "INIT-TODO" in the project and replace them with your own code.
+4. Search all the "INIT-TODO" and "boilerplate" in the project and replace them with your own code.
