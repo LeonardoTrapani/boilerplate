@@ -6,9 +6,7 @@ const nextConfig = {
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
-  experimental: {
-    serverComponentsExternalPackages: ["@prisma/client", "pdf-parse"],
-  },
+  experimental: {},
 }
 
 export default nextConfig

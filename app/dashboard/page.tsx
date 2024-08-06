@@ -2,10 +2,10 @@ import { redirect } from "next/navigation"
 
 import { authOptions } from "@/lib/auth"
 import { getCurrentUser } from "@/lib/session"
+import { PostCreateButton } from "@/components/create-button"
 import { DashboardShell } from "@/components/dashboard-shell"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { Header } from "@/components/header"
-import { PostCreateButton } from "@/components/post-create-button"
 
 export const metadata = {
   title: "Dashboard",
@@ -22,7 +22,7 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <Header heading="Posts" text="Create and manage posts.">
+      <Header heading="Dashboard" text="Create and manage the dashboard.">
         <PostCreateButton />
       </Header>
       <div>

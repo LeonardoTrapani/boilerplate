@@ -1,3 +1,5 @@
+// @ts-nocheck
+// TODO: Fix this when we turn strict mode on.
 import { UserSubscriptionPlan } from "types"
 import { freePlan, proPlan } from "@/config/subscriptions"
 import { db } from "@/lib/db"
