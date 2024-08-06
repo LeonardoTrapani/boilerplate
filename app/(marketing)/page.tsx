@@ -17,18 +17,18 @@ export default async function IndexPage() {
             Author&apos;s Linkedin
           </Link>
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
-            An example app built using Next.js 13 server components.
+            Get your next startup ready in minutes with Leonardo Trapani&apos;s
+            boilerplate.
           </h1>
           <p className="max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            I&apos;m building a web app with Next.js 13 and open sourcing
-            everything. Follow along as we figure this out together.
+            The most modern open source boilerplate for your next project.
           </p>
           <div className="space-x-4">
             <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started
             </Link>
             <Link
-              href={siteConfig.author.github}
+              href={siteConfig.author.github + "/boilerplate"}
               target="_blank"
               rel="noreferrer"
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
@@ -47,9 +47,8 @@ export default async function IndexPage() {
             Features
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            This project is an experiment to see how a modern app, with features
-            like auth, subscriptions, API routes, and static pages would work in
-            Next.js 13 app dir.
+            This is a boilerplate to ship your next project in minutes with the
+            most modern technologies, such as:
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-5xl md:grid-cols-3">
@@ -87,7 +86,7 @@ export default async function IndexPage() {
               <div className="space-y-2">
                 <h3 className="font-bold">Database</h3>
                 <p className="text-sm text-muted-foreground">
-                  ORM using Prisma and deployed on PlanetScale.
+                  ORM using Prisma and deployed on any database.
                 </p>
               </div>
             </div>
@@ -100,8 +99,8 @@ export default async function IndexPage() {
               <div className="space-y-2">
                 <h3 className="font-bold">Components</h3>
                 <p className="text-sm text-muted-foreground">
-                  UI components built using Radix UI and styled with Tailwind
-                  CSS.
+                  UI components built using Radix UI, shadcn, and styled with
+                  Tailwind CSS.
                 </p>
               </div>
             </div>
@@ -146,8 +145,8 @@ export default async function IndexPage() {
             Proudly Open Source
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Leonardo Trapani&apos;boilerplate is open source and powered by open
-            source software. <br /> The code is available on{" "}
+            Leonardo Trapani&apos;s boilerplate is open source and powered by
+            open source software. <br /> The code is available on{" "}
             <Link
               href={siteConfig.author.github + "/boilerplate"}
               target="_blank"
