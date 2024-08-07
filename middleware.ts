@@ -12,6 +12,11 @@ export default withAuth(
       return null
     }
 
+    const isWebhookPage = req.nextUrl.pathname === "/api/webhooks/stripe"
+    if (isWebhookPage) {
+      return null
+    }
+
     const isAuth = !!token
     const isAuthPage =
       req.nextUrl.pathname.startsWith("/login") ||

@@ -33,3 +33,9 @@ pnpm run dev
 ```
 
 4. Search all the "INIT-TODO" and "boilerplate" in the project and replace them with your own code.
+
+5. Make sure git hooks are installed:
+
+```sh
+pnpm prepare
+```
