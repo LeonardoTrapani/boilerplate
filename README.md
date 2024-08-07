@@ -23,7 +23,7 @@ pnpm install
 2. Copy `.env.example` to `.env` and update the variables.
 
 ```sh
-cp .env.example .env.local
+cp .env.example .env
 ```
 
 3. Start the development server:
