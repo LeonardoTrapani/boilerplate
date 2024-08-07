@@ -18,7 +18,8 @@
     "postinstall": "prisma generate",
     "migrate": "prisma migrate dev --preview-feature",
     "studio": "prisma studio",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
